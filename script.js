@@ -15,10 +15,14 @@
          
    
          
-         if (pilotNameInput === "" || copilotNameInput === "" || isNaN(cargoMassInput) || isNaN(cargoMassInput) ){
-            alert("All fields are required!");
-             
-         }
+       var letters = /^[a-zA-Z]+$/;
+       if (copilotNameInput.match(letters) == null || pilotNameInput.match(letters) == null  ) {
+          alert("Only Letters for Pilot & CoPilot")
+          return false
+          event.preventDefault
+        }
+ 
+        console.log(pilotNameInput.match(letters))
         
 
 
